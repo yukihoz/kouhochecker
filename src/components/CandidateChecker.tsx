@@ -227,18 +227,22 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                             <h5 className="text-lg font-bold text-gray-900 mb-1">
                                 チームみらいに投票ができません...
                             </h5>
-                            <p className="text-sm text-gray-600 mb-4">
-                                この選挙区には公認候補がいません。<br />
-                                SNS等で他の選挙区の候補者をぜひ応援してください！
-                            </p>
-                            <a
-                                href="https://team-mir.ai/#member"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-lg font-bold text-brand hover:underline"
-                            >
-                                衆院選の候補者一覧はこちら <ChevronRight size={20} />
-                            </a>
+                            {candidates.proportional.length === 0 && (
+                                <>
+                                    <p className="text-sm text-gray-600 mb-4">
+                                        この選挙区には公認候補がいません。<br />
+                                        SNS等で他の選挙区の候補者をぜひ応援してください！
+                                    </p>
+                                    <a
+                                        href="https://team-mir.ai/#member"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 text-lg font-bold text-brand hover:underline"
+                                    >
+                                        衆院選の候補者一覧はこちら <ChevronRight size={20} />
+                                    </a>
+                                </>
+                            )}
                         </div>
                     )}
                 </div>
