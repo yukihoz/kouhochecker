@@ -237,9 +237,9 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                                 href="https://team-mir.ai/#member"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-xs font-bold text-brand hover:underline"
+                                className="inline-flex items-center gap-1 text-lg font-bold text-brand hover:underline"
                             >
-                                衆院選の候補者一覧はこちら <ChevronRight size={12} />
+                                衆院選の候補者一覧はこちら <ChevronRight size={20} />
                             </a>
                         </div>
                     )}
@@ -347,9 +347,9 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                                 href="https://team-mir.ai/#member"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-xs font-bold text-brand hover:underline"
+                                className="inline-flex items-center gap-1 text-lg font-bold text-brand hover:underline"
                             >
-                                衆院選の候補者一覧はこちら <ChevronRight size={12} />
+                                衆院選の候補者一覧はこちら <ChevronRight size={20} />
                             </a>
                         </div>
                     )}
