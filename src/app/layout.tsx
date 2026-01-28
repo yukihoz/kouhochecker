@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Outfit } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 
-const outfit = Outfit({ subsets: ['latin'] });
+const notoSansJP = Noto_Sans_JP({ subsets: ['latin'], weight: ['400', '500', '700', '900'] });
 
 export const metadata: Metadata = {
   title: 'Team Mirai Candidate Checker',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={`${outfit.className} bg-gray-50 text-gray-900 min-h-screen antialiased`}>
+      <body className={`${notoSansJP.className} bg-gray-50 text-gray-900 min-h-screen antialiased`}>
         {children}
       </body>
     </html>
