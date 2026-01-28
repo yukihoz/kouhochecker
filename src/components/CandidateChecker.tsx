@@ -231,7 +231,7 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                             </h5>
                             <p className="text-sm text-gray-600">
                                 この選挙区には公認候補がいません。<br />
-                                SNS等で他の候補者をぜひ応援してください！
+                                SNS等で他の選挙区の候補者をぜひ応援してください！
                             </p>
                         </div>
                     )}
