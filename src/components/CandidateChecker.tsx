@@ -229,10 +229,18 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                             <h5 className="text-lg font-bold text-gray-900 mb-1">
                                 チームみらいに投票ができません...
                             </h5>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 mb-4">
                                 この選挙区には公認候補がいません。<br />
                                 SNS等で他の選挙区の候補者をぜひ応援してください！
                             </p>
+                            <a
+                                href="https://team-mir.ai/#member"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 text-xs font-bold text-brand hover:underline"
+                            >
+                                衆院選の候補者一覧はこちら <ChevronRight size={12} />
+                            </a>
                         </div>
                     )}
                 </div>
@@ -327,8 +335,22 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                             </div>
                         </>
                     ) : (
-                        <div className="bg-gray-50 rounded-xl p-6 border border-dashed border-gray-200 text-center">
-                            <p className="text-gray-500 text-sm">候補者情報がありません</p>
+                        <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 text-center">
+                            <h5 className="text-lg font-bold text-gray-900 mb-1">
+                                チームみらいに投票ができません...
+                            </h5>
+                            <p className="text-sm text-gray-600 mb-4">
+                                この選挙区には公認候補がいません。<br />
+                                SNS等で他の候補者をぜひ応援してください！
+                            </p>
+                            <a
+                                href="https://team-mir.ai/#member"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 text-xs font-bold text-brand hover:underline"
+                            >
+                                衆院選の候補者一覧はこちら <ChevronRight size={12} />
+                            </a>
                         </div>
                     )}
                 </div>
