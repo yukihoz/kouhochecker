@@ -141,7 +141,7 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                     <MapPin className="text-brand" size={24} />
                     <span>{districtName}</span>
                 </h3>
-                <span className="text-xs font-bold bg-brand text-white px-3 py-1 rounded-full">
+                <span className="text-xs font-bold bg-teal-50 text-brand border border-teal-200 px-3 py-1 rounded-full">
                     投票対象エリア
                 </span>
             </div>
