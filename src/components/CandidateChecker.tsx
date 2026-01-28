@@ -256,7 +256,7 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                         <>
                             {/* Unified Style: Success Banner using Brand Color (Teal) as requested */}
                             <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-6 text-center">
-                                <div className="flex items-center justify-center gap-2 text-brand font-bold text-lg md:text-xl mb-1">
+                                <div className="flex items-center justify-center gap-2 text-brand font-extrabold text-lg md:text-xl mb-1">
                                     <CheckCircle2 size={24} />
                                     <span>チームみらいに投票できます！</span>
                                 </div>
