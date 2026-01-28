@@ -39,7 +39,7 @@ export default function CandidateChecker() {
                     チームみらいに投票できる？
                 </h1>
                 <p className="text-gray-600 text-lg">
-                    あなたの選挙区で、チームみらいに投票できるかをチェックできます。
+                    住所などから、あなたがチームみらいに投票できるかをチェックできます。
                 </p>
             </motion.div>
 
