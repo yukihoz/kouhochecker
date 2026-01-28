@@ -192,12 +192,12 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                                                 href={candidates.singleProfile.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-xs font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200"
+                                                className="text-sm font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200"
                                             >
                                                 公式サイト
                                             </a>
                                         ) : (
-                                            <span className="text-xs font-bold text-gray-400 bg-gray-50 px-3 py-2 rounded-lg border border-gray-100 cursor-not-allowed">
+                                            <span className="text-sm font-bold text-gray-400 bg-gray-50 px-3 py-2 rounded-lg border border-gray-100 cursor-not-allowed">
                                                 公式サイト準備中
                                             </span>
                                         )}
@@ -205,16 +205,16 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                                         {candidates.singleProfile?.sns && (
                                             <>
                                                 {candidates.singleProfile.sns.twitter && (
-                                                    <a href={candidates.singleProfile.sns.twitter} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">X</a>
+                                                    <a href={candidates.singleProfile.sns.twitter} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">X</a>
                                                 )}
                                                 {candidates.singleProfile.sns.instagram && (
-                                                    <a href={candidates.singleProfile.sns.instagram} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">Instagram</a>
+                                                    <a href={candidates.singleProfile.sns.instagram} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">Instagram</a>
                                                 )}
                                                 {candidates.singleProfile.sns.facebook && (
-                                                    <a href={candidates.singleProfile.sns.facebook} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">Facebook</a>
+                                                    <a href={candidates.singleProfile.sns.facebook} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">Facebook</a>
                                                 )}
                                                 {candidates.singleProfile.sns.youtube && (
-                                                    <a href={candidates.singleProfile.sns.youtube} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">YouTube</a>
+                                                    <a href={candidates.singleProfile.sns.youtube} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-gray-500 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg transition border border-gray-200">YouTube</a>
                                                 )}
                                             </>
                                         )}
@@ -303,11 +303,11 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
 
                                                     <div className="flex flex-wrap gap-2 mt-2">
                                                         {profile ? (
-                                                            <a href={profile.url} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">
+                                                            <a href={profile.url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">
                                                                 公式サイト
                                                             </a>
                                                         ) : (
-                                                            <span className="text-[10px] font-bold text-gray-300 bg-gray-50 px-2 py-1 rounded border border-gray-100">
+                                                            <span className="text-xs font-bold text-gray-300 bg-gray-50 px-2 py-1 rounded border border-gray-100">
                                                                 準備中
                                                             </span>
                                                         )}
@@ -316,16 +316,16 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                                                         {profile?.sns && (
                                                             <>
                                                                 {profile.sns.twitter && (
-                                                                    <a href={profile.sns.twitter} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">X</a>
+                                                                    <a href={profile.sns.twitter} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">X</a>
                                                                 )}
                                                                 {profile.sns.instagram && (
-                                                                    <a href={profile.sns.instagram} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">Insta</a>
+                                                                    <a href={profile.sns.instagram} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">Insta</a>
                                                                 )}
                                                                 {profile.sns.facebook && (
-                                                                    <a href={profile.sns.facebook} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">FB</a>
+                                                                    <a href={profile.sns.facebook} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">FB</a>
                                                                 )}
                                                                 {profile.sns.youtube && (
-                                                                    <a href={profile.sns.youtube} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">YT</a>
+                                                                    <a href={profile.sns.youtube} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">YT</a>
                                                                 )}
                                                             </>
                                                         )}
