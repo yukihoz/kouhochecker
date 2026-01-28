@@ -99,9 +99,7 @@ export default function CandidateChecker() {
                                         <MapPin size={14} />
                                         {data.address}
                                     </div>
-                                    <h2 className="text-2xl font-bold text-gray-800">
-                                        {data.results.map(r => r.districtName).join('・')}
-                                    </h2>
+
                                     {data.results.length > 1 && (
                                         <p className="text-sm text-gray-500 mt-2">
                                             ※ 住所から複数の選挙区の可能性があります。
