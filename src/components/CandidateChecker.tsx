@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, MapPin, Users, Info, ChevronRight, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Search, MapPin, Users, Info, ChevronRight, AlertCircle, CheckCircle2, XCircle } from 'lucide-react';
 import { searchCandidates, SearchResponse, ConstituencyResult } from '@/actions/search';
 
 export default function CandidateChecker() {
@@ -224,8 +224,9 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                         </>
                     ) : (
                         <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 text-center">
-                            <h5 className="text-lg font-bold text-gray-900 mb-1">
-                                チームみらいに投票ができません...
+                            <h5 className="flex items-center justify-center gap-2 text-lg font-bold text-gray-900 mb-1">
+                                <XCircle size={24} />
+                                <span>チームみらいに投票ができません...</span>
                             </h5>
                             {candidates.proportional.length === 0 && (
                                 <>
@@ -338,8 +339,9 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                         </>
                     ) : (
                         <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 text-center">
-                            <h5 className="text-lg font-bold text-gray-900 mb-1">
-                                チームみらいに投票ができません...
+                            <h5 className="flex items-center justify-center gap-2 text-lg font-bold text-gray-900 mb-1">
+                                <XCircle size={24} />
+                                <span>チームみらいに投票ができません...</span>
                             </h5>
                             <p className="text-sm text-gray-600 mb-4">
                                 この選挙区には公認候補がいません。<br />
