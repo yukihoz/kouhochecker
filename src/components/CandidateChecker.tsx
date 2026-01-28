@@ -100,7 +100,7 @@ export default function CandidateChecker() {
                                         {data.address}
                                     </div>
                                     <h2 className="text-2xl font-bold text-gray-800">
-                                        該当する選挙区: {data.results.map(r => r.districtName).join('・')}
+                                        {data.results.map(r => r.districtName).join('・')}
                                     </h2>
                                     {data.results.length > 1 && (
                                         <p className="text-sm text-gray-500 mt-2">
