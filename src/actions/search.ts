@@ -68,7 +68,11 @@ export async function searchCandidates(input: string): Promise<SearchResponse> {
             const candMap = await getCandidatesMap();
 
             // Normalize input to CSV format: remove 都府県 (except 北海道 which is part of name)
-            let key = districtMatch[1] + districtMatch[2] + "区";
+            let pref = districtMatch[1];
+            // Special handling for Kyoto (京都) where '都' is often consumed by regex as optional suffix
+            if (pref === '京') pref = '京都';
+
+            let key = pref + districtMatch[2] + "区";
 
             // Verify if key exists
             if (candMap[key]) {
