@@ -2,7 +2,7 @@ import CandidateChecker from '@/components/CandidateChecker';
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4 flex flex-col items-center justify-center bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+    <main className="min-h-screen p-2 md:p-4 flex flex-col items-center justify-center bg-gradient-to-br from-teal-50 via-white to-emerald-50">
 
 
       <CandidateChecker />
