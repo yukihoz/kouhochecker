@@ -31,8 +31,15 @@ export async function searchCandidates(input: string): Promise<SearchResponse> {
     let fullAddress = '';
     let districtIds: string[] = [];
 
+    // Normalize Input:
+    // 1. Full-width numbers to Half-width
+    // 2. Remove all spaces
+    const normalizedInput = input
+        .replace(/[０-９]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 0xFEE0))
+        .replace(/\s+/g, '');
+
     // Check if input is Zip Code (7 digits)
-    const zipMatch = input.replace(/-/g, '').match(/^\d{7}$/);
+    const zipMatch = normalizedInput.replace(/-/g, '').match(/^\d{7}$/);
 
     if (zipMatch) {
         try {
@@ -55,7 +62,7 @@ export async function searchCandidates(input: string): Promise<SearchResponse> {
     } else {
         // Check for direct district input (e.g. "神奈川8区", "東京1区")
         // Allow optional "都府県" in input
-        const districtMatch = input.match(/^(.+?)(?:都|府|県)?(\d+)区$/);
+        const districtMatch = normalizedInput.match(/^(.+?)(?:都|府|県)?(\d+)区$/);
 
         if (districtMatch) {
             const candMap = await getCandidatesMap();
@@ -74,7 +81,7 @@ export async function searchCandidates(input: string): Promise<SearchResponse> {
         }
 
         // Try searching for Municipality name (Fallback)
-        const muniDistricts = await searchMunicipalities(input);
+        const muniDistricts = await searchMunicipalities(normalizedInput);
         if (muniDistricts.length > 0) {
             // Found districts for this municipality
             districtIds = muniDistricts;
