@@ -141,7 +141,7 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                     <MapPin className="text-brand" size={24} />
                     <span>{districtName}</span>
                 </h3>
-                <span className="text-xs font-bold bg-teal-50 text-brand border border-teal-200 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold bg-brand text-white px-3 py-1 rounded-full">
                     投票対象エリア
                 </span>
             </div>
@@ -156,8 +156,8 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
 
                     {candidates.single ? (
                         <>
-                            <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-6 text-center">
-                                <div className="flex items-center justify-center gap-2 text-brand font-bold text-lg md:text-xl mb-1">
+                            <div className="bg-brand border border-brand rounded-xl p-4 mb-6 text-center">
+                                <div className="flex items-center justify-center gap-2 text-white font-bold text-lg md:text-xl mb-1">
                                     <CheckCircle2 size={24} />
                                     <span>チームみらいに投票できます！</span>
                                 </div>
@@ -255,8 +255,8 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                     {candidates.proportional.length > 0 ? (
                         <>
                             {/* Unified Style: Success Banner using Brand Color (Teal) as requested */}
-                            <div className="bg-brand border border-brand rounded-xl p-4 mb-6 text-center">
-                                <div className="flex items-center justify-center gap-2 text-white font-bold text-lg md:text-xl mb-1">
+                            <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-6 text-center">
+                                <div className="flex items-center justify-center gap-2 text-brand font-bold text-lg md:text-xl mb-1">
                                     <CheckCircle2 size={24} />
                                     <span>チームみらいに投票できます！</span>
                                 </div>
