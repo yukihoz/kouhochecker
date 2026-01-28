@@ -155,7 +155,7 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                     {candidates.single ? (
                         <>
                             <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-6 text-center">
-                                <div className="flex items-center justify-center gap-2 text-brand font-extrabold text-lg md:text-xl mb-1">
+                                <div className="flex items-center justify-center gap-2 text-gray-900 font-extrabold text-lg md:text-xl mb-1">
                                     <CheckCircle2 size={24} />
                                     <span>チームみらいに投票できます！</span>
                                 </div>
@@ -182,8 +182,8 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                                     <h5 className="text-3xl font-bold text-gray-900 mb-2">
                                         {candidates.single}
                                     </h5>
-                                    <p className="text-sm text-gray-500 mb-4 font-medium">
-                                        投票用紙には「<span className="text-gray-900 font-bold bg-teal-100 px-1 rounded">{candidates.single}</span>」とお書きください。
+                                    <p className="text-lg text-gray-800 mb-4 font-bold">
+                                        投票用紙には「<span className="text-gray-900 font-extrabold bg-teal-100 px-1 rounded">{candidates.single}</span>」とお書きください。
                                     </p>
 
                                     <div className="flex flex-wrap justify-center sm:justify-start gap-3">
@@ -258,105 +258,113 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                         <>
                             {/* Unified Style: Success Banner using Brand Color (Teal) as requested */}
                             <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-6 text-center">
-                                <div className="flex items-center justify-center gap-2 text-brand font-extrabold text-lg md:text-xl mb-1">
+                                <div className="flex items-center justify-center gap-2 text-gray-900 font-extrabold text-lg md:text-xl mb-1">
                                     <CheckCircle2 size={24} />
                                     <span>チームみらいに投票できます！</span>
                                 </div>
                             </div>
 
-                            <p className="text-sm text-gray-500 mb-4 font-medium text-center sm:text-left">
-                                投票用紙には政党名「<span className="text-gray-900 font-bold bg-teal-100 px-1 rounded">チームみらい</span>」とお書きください。
-                            </p>
+                            <p className="text-lg text-gray-800 mb-4 font-bold text-center sm:text-left">
+                                This sentence is just a placeholder to ensure I target the right block structure, but I will replace the whole block.
+                                Wait, I should not separate the StartLine/EndLine logic too much.
+                                TARGET:
+                                <p className="text-sm text-gray-500 mb-4 font-medium text-center sm:text-left">
+                                    投票用紙には政党名「<span className="text-gray-900 font-bold bg-teal-100 px-1 rounded">チームみらい</span>」とお書きください。
+                                </p>
+                                REPLACEMENT:
+                                <p className="text-lg text-gray-800 mb-4 font-bold text-center sm:text-left">
+                                    投票用紙には政党名「<span className="text-gray-900 font-extrabold bg-teal-100 px-1 rounded">チームみらい</span>」とお書きください。
+                                </p>
 
-                            <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-                                <h5 className="font-bold text-gray-700 mb-4 text-sm">
-                                    名簿登載者一覧
-                                </h5>
-                                <div className="grid gap-4 sm:grid-cols-2">
-                                    {candidates.proportional.map((cand, i) => {
-                                        const profile = candidates.proportionalProfiles?.[cand];
-                                        return (
-                                            <div key={i} className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-teal-200 transition group items-start">
-                                                {/* Image */}
-                                                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border-2 border-white shadow-sm relative">
-                                                    <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
-                                                        {profile?.image ? (
-                                                            <img
-                                                                src={profile.image}
-                                                                alt={cand}
-                                                                className="w-full h-full object-cover"
-                                                            />
-                                                        ) : (
-                                                            <Users size={24} className="text-gray-300" />
-                                                        )}
+                                <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                                    <h5 className="font-bold text-gray-700 mb-4 text-sm">
+                                        名簿登載者一覧
+                                    </h5>
+                                    <div className="grid gap-4 sm:grid-cols-2">
+                                        {candidates.proportional.map((cand, i) => {
+                                            const profile = candidates.proportionalProfiles?.[cand];
+                                            return (
+                                                <div key={i} className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-teal-200 transition group items-start">
+                                                    {/* Image */}
+                                                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border-2 border-white shadow-sm relative">
+                                                        <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
+                                                            {profile?.image ? (
+                                                                <img
+                                                                    src={profile.image}
+                                                                    alt={cand}
+                                                                    className="w-full h-full object-cover"
+                                                                />
+                                                            ) : (
+                                                                <Users size={24} className="text-gray-300" />
+                                                            )}
+                                                        </div>
+                                                        <span className="absolute -top-1 -left-1 w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center font-bold text-[10px] shadow-sm z-10 border border-white">
+                                                            {i + 1}
+                                                        </span>
                                                     </div>
-                                                    <span className="absolute -top-1 -left-1 w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center font-bold text-[10px] shadow-sm z-10 border border-white">
-                                                        {i + 1}
-                                                    </span>
-                                                </div>
 
-                                                <div className="flex-1 min-w-0 pt-1">
-                                                    <h6 className="font-bold text-gray-900 text-lg leading-tight mb-1">
-                                                        {cand}
-                                                    </h6>
+                                                    <div className="flex-1 min-w-0 pt-1">
+                                                        <h6 className="font-bold text-gray-900 text-lg leading-tight mb-1">
+                                                            {cand}
+                                                        </h6>
 
-                                                    <div className="flex flex-wrap gap-2 mt-2">
-                                                        {profile ? (
-                                                            <a href={profile.url} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">
-                                                                公式サイト
-                                                            </a>
-                                                        ) : (
-                                                            <span className="text-[10px] font-bold text-gray-300 bg-gray-50 px-2 py-1 rounded border border-gray-100">
-                                                                準備中
-                                                            </span>
-                                                        )}
+                                                        <div className="flex flex-wrap gap-2 mt-2">
+                                                            {profile ? (
+                                                                <a href={profile.url} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">
+                                                                    公式サイト
+                                                                </a>
+                                                            ) : (
+                                                                <span className="text-[10px] font-bold text-gray-300 bg-gray-50 px-2 py-1 rounded border border-gray-100">
+                                                                    準備中
+                                                                </span>
+                                                            )}
 
-                                                        {/* SNS Links */}
-                                                        {profile?.sns && (
-                                                            <>
-                                                                {profile.sns.twitter && (
-                                                                    <a href={profile.sns.twitter} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">X</a>
-                                                                )}
-                                                                {profile.sns.instagram && (
-                                                                    <a href={profile.sns.instagram} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">Insta</a>
-                                                                )}
-                                                                {profile.sns.facebook && (
-                                                                    <a href={profile.sns.facebook} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">FB</a>
-                                                                )}
-                                                                {profile.sns.youtube && (
-                                                                    <a href={profile.sns.youtube} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">YT</a>
-                                                                )}
-                                                            </>
-                                                        )}
+                                                            {/* SNS Links */}
+                                                            {profile?.sns && (
+                                                                <>
+                                                                    {profile.sns.twitter && (
+                                                                        <a href={profile.sns.twitter} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">X</a>
+                                                                    )}
+                                                                    {profile.sns.instagram && (
+                                                                        <a href={profile.sns.instagram} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">Insta</a>
+                                                                    )}
+                                                                    {profile.sns.facebook && (
+                                                                        <a href={profile.sns.facebook} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">FB</a>
+                                                                    )}
+                                                                    {profile.sns.youtube && (
+                                                                        <a href={profile.sns.youtube} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-gray-500 bg-white hover:bg-gray-100 px-2 py-1 rounded border border-gray-200 transition">YT</a>
+                                                                    )}
+                                                                </>
+                                                            )}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        )
-                                    })}
+                                            )
+                                        })}
+                                    </div>
                                 </div>
+                            </>
+                            ) : (
+                            <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 text-center">
+                                <h5 className="text-lg font-bold text-gray-900 mb-1">
+                                    チームみらいに投票ができません...
+                                </h5>
+                                <p className="text-sm text-gray-600 mb-4">
+                                    この選挙区には公認候補がいません。<br />
+                                    SNS等で他の候補者をぜひ応援してください！
+                                </p>
+                                <a
+                                    href="https://team-mir.ai/#member"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-lg font-bold text-brand hover:underline"
+                                >
+                                    衆院選の候補者一覧はこちら <ChevronRight size={20} />
+                                </a>
                             </div>
-                        </>
-                    ) : (
-                        <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 text-center">
-                            <h5 className="text-lg font-bold text-gray-900 mb-1">
-                                チームみらいに投票ができません...
-                            </h5>
-                            <p className="text-sm text-gray-600 mb-4">
-                                この選挙区には公認候補がいません。<br />
-                                SNS等で他の候補者をぜひ応援してください！
-                            </p>
-                            <a
-                                href="https://team-mir.ai/#member"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-lg font-bold text-brand hover:underline"
-                            >
-                                衆院選の候補者一覧はこちら <ChevronRight size={20} />
-                            </a>
-                        </div>
                     )}
+                        </div>
                 </div>
-            </div>
         </motion.div>
     );
 }
