@@ -9,9 +9,7 @@ export default function Home() {
 
       <CandidateChecker />
 
-      <footer className="mt-20 text-gray-400 text-sm">
-        &copy; Team Mirai {new Date().getFullYear()}
-      </footer>
+
     </main>
   );
 }
