@@ -35,6 +35,9 @@ export default function CandidateChecker() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-12"
             >
+                <div className="mb-2">
+                    <span className="text-black font-bold text-sm md:text-base">mirai checker(非公式)</span>
+                </div>
                 <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-teal-500 mb-4 tracking-tight">
                     チームみらいに投票できる？
                 </h1>
