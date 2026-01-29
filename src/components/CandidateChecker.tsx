@@ -255,7 +255,7 @@ function ConstituencyCard({ result }: { result: ConstituencyResult }) {
                 <div>
                     <h4 className="flex items-center gap-2 font-bold text-lg text-gray-700 mb-4 pb-2 border-b border-gray-100">
                         <Users className="text-brand" size={20} />
-                        2枚目の投票用紙：比例代表（{candidates.block}ブロック）
+                        2枚目の投票用紙：比例代表（{candidates.block}）
                     </h4>
 
                     {candidates.proportional.length > 0 ? (
