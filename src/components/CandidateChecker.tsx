@@ -60,12 +60,12 @@ export default function CandidateChecker() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="例: 100-0001, 札幌市, 東京1区..."
-                        className="flex-1 px-6 py-4 text-lg outline-none text-gray-800 placeholder-gray-400"
+                        className="flex-1 px-4 md:px-6 py-4 text-lg outline-none text-gray-800 placeholder-gray-400 min-w-0"
                     />
                     <button
                         type="submit"
                         disabled={loading}
-                        className="bg-gray-50 px-8 py-4 font-medium text-gray-700 hover:bg-gray-100 transition-colors flex items-center gap-2 disabled:opacity-50"
+                        className="bg-gray-50 px-4 md:px-8 py-4 font-medium text-gray-700 hover:bg-gray-100 transition-colors flex items-center gap-2 disabled:opacity-50 shrink-0"
                     >
                         {loading ? (
                             <div className="w-5 h-5 border-2 border-brand border-t-transparent rounded-full animate-spin" />
