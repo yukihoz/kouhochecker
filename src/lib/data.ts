@@ -71,9 +71,13 @@ export async function getCandidatesMap(): Promise<Record<string, CandidateData>>
         const district = row[0];
         if (!district || district === '小選挙区' || index === 0) return; // Skip header
 
-        const singleCand = row[1] || null;
+        const singleCandRaw = row[1] || null;
+        // Filter out '山本たけよし'
+        const singleCand = singleCandRaw === '山本たけよし' ? null : singleCandRaw;
+
         const block = row[2];
-        const props = row.slice(3).filter(s => s && s.trim().length > 0);
+        // Filter out '山本たけよし' from proportional candidates
+        const props = row.slice(3).filter(s => s && s.trim().length > 0 && s !== '山本たけよし');
 
         let singleProfile: CandidateProfile | undefined;
         if (singleCand && profiles[singleCand]) {
