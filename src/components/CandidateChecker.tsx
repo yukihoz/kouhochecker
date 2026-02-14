@@ -46,23 +46,6 @@ export default function CandidateChecker() {
                 </p>
             </motion.div>
 
-            {/* 投票日対応のため検索機能を一時停止 */}
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="relative mb-12 text-center"
-            >
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-teal-100">
-                    <p className="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed">
-                        投票日当日を迎えるにあたり、<br className="hidden md:block" />
-                        機能を停止しています。<br />
-                        <span className="text-brand text-2xl md:text-3xl mt-2 inline-block">2/8(日)は投票に行きましょう！</span>
-                    </p>
-                </div>
-            </motion.div>
-
-            {/*
             <motion.form
                 onSubmit={handleSearch}
                 initial={{ opacity: 0, y: 10 }}
@@ -95,7 +78,6 @@ export default function CandidateChecker() {
                     </button>
                 </div>
             </motion.form>
-            */}
 
             <AnimatePresence mode="wait">
                 {data && (
